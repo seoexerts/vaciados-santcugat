@@ -15,13 +15,20 @@ import { EMPRESA } from './empresa';
 
 // ── JSON de ciudades ──────────────────────────────────────────────────────────
 // ⚠️  Sustituye estos imports por los JSONs de tu proyecto (generados con generator.html)
-import santCugatRaw from './ciudades/sant-cugat-del-valles.json';
-import rubiRaw from './ciudades/rubi.json';
+import santCugatRaw        from './ciudades/sant-cugat-del-valles.json';
+import rubiRaw              from './ciudades/rubi.json';
+import cerdanyolaRaw        from './ciudades/cerdanyola-del-valles.json';
+import molletRaw            from './ciudades/mollet-del-valles.json';
+import badalonaRaw          from './ciudades/badalona.json';
+import santaPerpetueRaw     from './ciudades/santa-perpetua-de-moguda.json';
 
 const rawCiudades = [
   santCugatRaw,
   rubiRaw,
-  // Añade aquí más ciudades en orden (la primera = ciudad principal del sitio)
+  cerdanyolaRaw,
+  molletRaw,
+  badalonaRaw,
+  santaPerpetueRaw,
 ];
 // ─────────────────────────────────────────────────────────────────────────────
 

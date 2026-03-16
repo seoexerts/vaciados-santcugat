@@ -1,0 +1,31 @@
+{
+  "slug": "mollet-del-valles",
+  "nombre": "Mollet del Vallès",
+  "provincia": "Barcelona",
+  "lat": 41.4763,
+  "lng": 2.3205,
+  "telefono": "+34 633 75 96 49 ",
+  "email": "seoexpertsslu@gmail.com",
+  "direccion": "Carrer de Gaietà Ventalló, 68",
+  "codigoPostal": "08100",
+  "zonas": [
+    "Centre",
+    "Plaça de la Font",
+    "Can Travi Nou",
+    "Les Murges",
+    "Santa Maria",
+    "Sant Pere",
+    "Mollet Nord",
+    "Parc Central"
+  ],
+  "serviciosActivos": [
+    "vaciado-pisos",
+    "vaciado-locales",
+    "recogida-muebles",
+    "limpieza-diogenes",
+    "limpieza-post-vaciado",
+    "pintura-express"
+  ],
+  "seoIntro": "{ciudad} es un importante núcleo industrial en la {provincia}, conocido por su dinamismo económico y sus zonas verdes.  Con más de 54.000 habitantes, ofrece una excelente calidad de vida.",
+  "metaDesc": "Servicios profesionales de vaciado en {ciudad}. VaciadosPro Sant Cugat te ayuda a liberar espacios con rapidez y eficiencia."
+}

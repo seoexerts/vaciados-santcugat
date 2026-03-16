@@ -1,0 +1,33 @@
+{
+  "slug": "badalona",
+  "nombre": "Badalona",
+  "provincia": "Barcelona",
+  "lat": 41.4567,
+  "lng": 2.2435,
+  "telefono": "+34 633 75 96 49 ",
+  "email": "seoexpertsslu@gmail.com",
+  "direccion": "Baldomero Sola 202",
+  "codigoPostal": "08912",
+  "zonas": [
+    "Montigalà",
+    "Centre",
+    "Collègic",
+    "Rauxa",
+    "Les Planetes",
+    "Rocafort",
+    "Pep Ventura",
+    "Badalona Est",
+    "Sant Crist",
+    "Bufyvet"
+  ],
+  "serviciosActivos": [
+    "vaciado-pisos",
+    "vaciado-locales",
+    "recogida-muebles",
+    "limpieza-diogenes",
+    "limpieza-post-vaciado",
+    "pintura-express"
+  ],
+  "seoIntro": "{ciudad} es una ciudad marítima en la {provincia}, con una rica historia industrial y un importante puerto.  Su población supera los 240.000 habitantes, lo que la convierte en una de las ciudades más grandes del Baix Llobregat.",
+  "metaDesc": "VaciadosPro Sant Cugat ofrece servicios profesionales de vaciado en {ciudad}. Desokupa y limpia tu propiedad de forma rápida y segura."
+}

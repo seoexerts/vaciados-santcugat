@@ -1,0 +1,30 @@
+{
+  "slug": "cerdanyola-del-valles",
+  "nombre": "Cerdanyola del Vallès",
+  "provincia": "Barcelona",
+  "lat": 41.5102,
+  "lng": 2.3117,
+  "telefono": "+34 633 75 96 49 ",
+  "email": "seoexpertsslu@gmail.com",
+  "direccion": "Carrer Maresme, 21",
+  "codigoPostal": "08290 ",
+  "zonas": [
+    "Centre",
+    "Bon Pastor",
+    "El Segre",
+    "Can Cuyàs",
+    "Les Planes",
+    "Sant Pere de Cerdanyola",
+    "Torrentó"
+  ],
+  "serviciosActivos": [
+    "vaciado-pisos",
+    "vaciado-locales",
+    "recogida-muebles",
+    "limpieza-diogenes",
+    "limpieza-post-vaciado",
+    "pintura-express"
+  ],
+  "seoIntro": "{ciudad} es un importante centro universitario y tecnológico en la {provincia}, con una población joven y dinámica.  Cuenta con una amplia oferta educativa y cultural.",
+  "metaDesc": "Necesitas vaciar en {ciudad}? VaciadosPro Sant Cugat te ofrece soluciones rápidas, eficientes y a precios competitivos."
+}
