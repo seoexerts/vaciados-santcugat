@@ -24,7 +24,8 @@ export const siteConfig = {
   phone:    '+34 633 75 96 49',
   email:    'seoexpertsslu@gmail.com',
   whatsapp: '34633759649',
-  web:      'https://vaciados-santcugat.vercel.app/',
+  // @ts-ignore — requiere node_modules para que el IDE resuelva los tipos de Astro
+  web: import.meta.env.SITE || 'https://vaciados-santcugat.pages.dev',
 
   // ── Horario ───────────────────────────────────────────
   horario:      'Mo-Fr 09:00-20:00',

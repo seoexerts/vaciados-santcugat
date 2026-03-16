@@ -2,10 +2,12 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
+const siteUrl = process.env.PUBLIC_SITE_URL || 'https://vaciados-santcugat.pages.dev';
+
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  site: 'https://vaciados-santcugat.vercel.app/',
+  site: siteUrl,
   integrations: [
     sitemap({
       changefreq: 'weekly',
