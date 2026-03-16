@@ -43,3 +43,7 @@ const {
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image"       content={ogImage} />
 <meta name="twitter:image:alt"   content={title} />
+
+<!-- Verificación de sitio -->
+{siteConfig.googleVerification && <meta name="google-site-verification" content={siteConfig.googleVerification} />}
+{siteConfig.bingVerification   && <meta name="msvalidate.01"            content={siteConfig.bingVerification} />}

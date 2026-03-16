@@ -55,6 +55,10 @@ export const siteConfig = {
     linkedin:  '',
   },
 
+  // ── Verificación de sitio ─────────────────────────────
+  googleVerification: '',
+  bingVerification:   '',
+
 } as const;
 
 export type SiteConfig = typeof siteConfig;
