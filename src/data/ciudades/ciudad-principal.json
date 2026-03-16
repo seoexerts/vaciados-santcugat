@@ -1,0 +1,17 @@
+{
+  "slug": "ciudad-principal",
+  "nombre": "Ciudad Principal",
+  "provincia": "Provincia",
+  "lat": 41.3851,
+  "lng": 2.1734,
+  "telefono": "+34 600 000 000",
+  "email": "info@ejemplo.com",
+  "direccion": "Calle Mayor, 1",
+  "codigoPostal": "00000",
+  "zonas": [
+    "Centro", "Norte", "Sur", "Este", "Oeste"
+  ],
+  "seoIntro": "{ciudad} es un municipio de {provincia}. Prestamos servicio en el Centro y todos los barrios del municipio, con cobertura también en los municipios limítrofes.",
+  "metaDesc": "Tipo de servicio en {ciudad} — equipo propio, precio cerrado y presupuesto gratuito en 24 h. Sin subcontratas.",
+  "serviciosActivos": ["vaciado-pisos", "vaciado-locales", "recogida-muebles"]
+}

@@ -1,0 +1,225 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FAQSchema from '../components/FAQSchema.astro';
+import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
+import { ciudades, EMPRESA } from '../data/index';
+import { siteConfig } from '../config/site';
+
+const title       = `Preguntas frecuentes | ${EMPRESA.nombre}`;
+const description = `Resolvemos las dudas más habituales sobre nuestros servicios en ${ciudades.map(c=>c.nombre).join(', ')}: presupuesto, plazos, garantía y zonas de cobertura.`;
+
+const ciudad   = ciudades[0].nombre;
+const canonical = `${siteConfig.web}/faq/`;
+
+const faqs = [
+  {
+    pregunta: `¿Cuánto cuesta vaciar un piso en ${ciudad}?`,
+    respuesta: `El precio depende del tamaño y el volumen de enseres. Un piso de 70–90 m² en ${ciudad} suele estar entre 250 € y 500 €. Te enviamos presupuesto gratuito en menos de 24 horas, sin visita previa en muchos casos (basta con fotos por WhatsApp).`,
+  },
+  {
+    pregunta: '¿Cuánto tiempo tarda el vaciado de un piso?',
+    respuesta: 'La mayoría de pisos se vacían en un solo día. Un piso de 3 habitaciones con mobiliario completo lleva entre 4 y 8 horas con nuestro equipo. Los locales comerciales dependen del volumen y del tipo de mobiliario.',
+  },
+  {
+    pregunta: '¿El presupuesto es gratuito y sin compromiso?',
+    respuesta: `Sí, 100% gratuito y sin compromiso. En muchos casos te lo damos por teléfono o WhatsApp con fotos del inmueble. Si el trabajo lo requiere, hacemos visita previa en ${ciudad} también sin coste.`,
+  },
+  {
+    pregunta: '¿Qué hacéis con los muebles y objetos retirados?',
+    respuesta: 'Separamos los objetos en buen estado para donarlos a entidades sociales o canales de segunda mano. El resto se lleva a puntos de reciclaje autorizados. Podemos emitir certificado de gestión de residuos si lo necesitas.',
+  },
+  {
+    pregunta: `¿Podéis vaciar un local comercial en ${ciudad}?`,
+    respuesta: `Sí. Vaciamos oficinas, tiendas, almacenes y naves industriales en ${ciudad} y comarca. Desmontamos estanterías y mobiliario fijo, y gestionamos los residuos con certificado incluido. Nos adaptamos a horarios fuera de jornada para no interrumpir tu actividad.`,
+  },
+  {
+    pregunta: '¿Podéis vaciar un piso de herencia con trámites pendientes?',
+    respuesta: 'Sí. Trabajamos habitualmente con gestorías, notarías y familiares en proceso de herencia. Podemos coordinar el vaciado con los tiempos legales y documentar lo retirado si es necesario.',
+  },
+  {
+    pregunta: '¿Recogéis muebles sueltos sin necesidad de vaciar el piso entero?',
+    respuesta: 'Sí. Si solo necesitas retirar un sofá, una cama, armarios o electrodomésticos, subimos hasta tu piso a recogerlos. El precio se calcula por volumen y en muchos casos podemos atenderte el mismo día.',
+  },
+  {
+    pregunta: '¿Trabajáis en fines de semana?',
+    respuesta: 'Sí, disponemos de servicio en fines de semana con cita previa. Consulta disponibilidad al solicitar el presupuesto.',
+  },
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <FAQSchema faqs={faqs} slot="head" />
+  <BreadcrumbSchema
+    items={[
+      { name: 'Inicio',               url: `${siteConfig.web}/` },
+      { name: 'Preguntas frecuentes', url: canonical },
+    ]}
+    slot="head"
+  />
+
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow">Preguntas frecuentes · {ciudad}</span>
+      <h1>Resolvemos tus dudas sobre el vaciado en {ciudad}</h1>
+      <p class="page-header-sub">
+        Todo lo que necesitas saber antes de contratar nuestros servicios de vaciado y limpieza en {ciudad}.
+        ¿No encuentras tu pregunta? <a href="/contacto">Escríbenos directamente</a>.
+      </p>
+    </div>
+  </div>
+
+  <section class="page-section" aria-labelledby="faq-lista-heading">
+    <div class="container">
+      <h2 id="faq-lista-heading" class="faq-section-heading">Preguntas frecuentes sobre vaciado en {ciudad}</h2>
+      <div class="faq-list">
+        {faqs.map((faq, i) => (
+          <details class="faq-item" open={i === 0 || undefined}>
+            <summary>
+              <span>{faq.pregunta}</span>
+              <span class="faq-chevron" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 8l5 5 5-5"/>
+                </svg>
+              </span>
+            </summary>
+            <p>{faq.respuesta}</p>
+          </details>
+        ))}
+      </div>
+
+      <div class="faq-links">
+        <p>
+          Explora nuestros <a href="/servicios/">servicios de vaciado y limpieza</a>,
+          o consulta directamente las páginas de
+          <a href={`/${ciudades[0].slug}/vaciado-pisos/`}>vaciado de pisos en {ciudades[0].nombre}</a>,
+          <a href={`/${ciudades[0].slug}/vaciado-locales/`}>vaciado de locales en {ciudades[0].nombre}</a>
+          y <a href={`/${ciudades[0].slug}/recogida-muebles/`}>recogida de muebles en {ciudades[0].nombre}</a>.
+        </p>
+      </div>
+
+      <div class="faq-cta">
+        <p>¿Tienes alguna pregunta que no aparece aquí?</p>
+        <a href="/contacto" class="btn btn-primary btn-lg">Contáctanos →</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-top: var(--header-h);
+    background: var(--c-hero-gradient);
+    padding-block: 4.5rem 3.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+  .page-header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 55% 60% at 75% 15%, rgba(0,100,255,.3) 0%, transparent 65%),
+      radial-gradient(ellipse 35% 40% at 15% 85%, rgba(80,80,200,.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .page-header .container { position: relative; z-index: 1; }
+  .page-header .eyebrow {
+    color: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+  }
+  .page-header h1 { color: #fff; margin-bottom: .75rem; margin-top: .5rem; }
+  .page-header-sub {
+    color: rgba(255,255,255,.72);
+    font-size: 1rem;
+    max-width: 580px;
+    margin-inline: auto;
+    line-height: 1.7;
+  }
+  .page-header-sub a { color: #93c5fd; }
+
+  .faq-section-heading {
+    font-size: 1.3rem;
+    margin-bottom: 1.75rem;
+    color: var(--c-text);
+  }
+
+  .faq-list {
+    max-width: 780px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+  }
+
+  .faq-item {
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    transition: box-shadow .2s;
+  }
+  .faq-item[open] { box-shadow: var(--sh-card); }
+
+  .faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .95rem;
+    list-style: none;
+    user-select: none;
+    background: var(--c-bg);
+    transition: background .15s;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary:hover                   { background: var(--c-bg-tint); }
+  .faq-item[open] summary                   { background: var(--c-primary-l); color: var(--c-primary); }
+
+  .faq-chevron { flex-shrink: 0; width: 20px; height: 20px; transition: transform .25s; }
+  .faq-item[open] .faq-chevron { transform: rotate(180deg); }
+  .faq-chevron svg { width: 100%; height: 100%; }
+
+  .faq-item p {
+    padding: 1.1rem 1.5rem 1.35rem;
+    font-size: .93rem;
+    color: var(--c-text-m);
+    line-height: 1.7;
+    border-top: 1px solid var(--c-border);
+  }
+
+  .faq-links {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--c-primary-l);
+    border: 1px solid #bfdbfe;
+    border-radius: var(--r-md);
+    font-size: .9rem;
+    color: var(--c-text-m);
+    line-height: 1.7;
+  }
+  .faq-links a { color: var(--c-primary); font-weight: 500; }
+  .faq-links a:hover { text-decoration: underline; }
+
+  .faq-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2.5rem;
+    background: var(--c-bg-tint);
+    border-radius: var(--r-xl);
+    border: 1px solid var(--c-border);
+  }
+  .faq-cta p { color: var(--c-text-m); margin-bottom: 1.25rem; font-size: 1.05rem; }
+</style>
