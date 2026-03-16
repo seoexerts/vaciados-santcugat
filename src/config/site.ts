@@ -24,8 +24,7 @@ export const siteConfig = {
   phone:    '+34 633 75 96 49',
   email:    'seoexpertsslu@gmail.com',
   whatsapp: '34633759649',
-  // @ts-ignore — requiere node_modules para que el IDE resuelva los tipos de Astro
-  web: import.meta.env.SITE || 'https://vaciados-santcugat.pages.dev',
+  web:      'https://vaciados-santcugat.vercel.app/',
 
   // ── Horario ───────────────────────────────────────────
   horario:      'Mo-Fr 09:00-20:00',
@@ -56,7 +55,7 @@ export const siteConfig = {
   },
 
   // ── Verificación de sitio ─────────────────────────────
-  googleVerification: '',
+  googleVerification: '<meta name="google-site-verification" content="VecKxVtQt7zzzW_RNZbxeAsYQ66Ih20xCXJu00z2fAA" />',
   bingVerification:   '',
 
 } as const;
