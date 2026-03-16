@@ -2,12 +2,15 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
+import cloudflare from '@astrojs/cloudflare';
+
 const siteUrl = process.env.PUBLIC_SITE_URL || 'https://vaciados-santcugat.pages.dev';
 
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
   site: siteUrl,
+
   integrations: [
     sitemap({
       changefreq: 'weekly',
@@ -15,4 +18,6 @@ export default defineConfig({
       lastmod: new Date(),
     }),
   ],
+
+  adapter: cloudflare(),
 });
