@@ -1,0 +1,35 @@
+{
+  "slug": "rubi",
+  "nombre": "Rubí",
+  "provincia": "Barcelona",
+  "lat": 41.49310854192875,
+  "lng": 2.0377713377050024,
+  "telefono": " 633 75 96 49 ",
+  "email": "seoexpertsslu@gmail.com",
+  "direccion": "Carrer de Lope de Vega, 29-15",
+  "codigoPostal": "08191 ",
+  "zonas": [
+    "Centre",
+    "Mollet",
+    "La Font D'en Fardissa",
+    "Pou del Lleó",
+    "Can Trias",
+    "Les Maçanes",
+    "Bell Lloc",
+    "Sant Pau",
+    "Torrent Nova",
+    "Plaça de l'Església",
+    "Avinguda de Catalunya",
+    "Carrer de les Flors",
+    "Zona Industrial",
+    "Mas Bofí",
+    "Barri de la Verneda"
+  ],
+  "serviciosActivos": [
+    "vaciado-pisos",
+    "vaciado-locales",
+    "recogida-muebles"
+  ],
+  "seoIntro": "Rubí, en la provincia de Barcelona, es un municipio con una población aproximada de 68.000 habitantes, conocido por su importante tejido industrial y su cercanía a Barcelona. VaciadosPro Sant Cugat ofrece soluciones profesionales para el vaciado de pisos y locales en {ciudad}, facilitando mudanzas, herencias o reformas en barrios clave como Pou del Lleó y Can Trias.",
+  "metaDesc": "Vaciado de pisos y locales en Rubí? VaciadosPro Sant Cugat te ayuda con limpieza total, desescombro y retirada de muebles. ¡Pide tu presupuesto!"
+}
